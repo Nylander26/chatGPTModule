@@ -1,0 +1,15 @@
+version: '3'
+services:
+  chatGPT module:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8005:8005"
+    env_file:
+      - .env
+    networks:
+      - chatbot-network
+networks:
+  chatbot-network:
+    external: true

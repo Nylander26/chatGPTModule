@@ -1,0 +1,20 @@
+# Excluir directorios de node_modules
+node_modules
+
+# Excluir archivos de registro
+*.log
+
+# Excluir directorio .git y archivos relacionados
+.git
+.gitignore
+
+# Excluir directorios de pruebas
+__tests__
+__mocks__
+
+# Excluir archivos y directorios de desarrollo
+*.md
+LICENSE
+.dockerignore
+Dockerfile
+*.config.js

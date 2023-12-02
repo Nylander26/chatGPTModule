@@ -1,0 +1,27 @@
+# Node.js
+node_modules/
+
+# TypeScript
+*.js
+*.js.map
+*.d.ts
+
+# Visual Studio Code
+.vscode/
+
+# npm
+package-lock.json
+npm-debug.log
+
+# macOS
+.DS_Store
+
+# Log files
+logs/
+*.log
+
+# Personal files
+clave-bot.json
+
+# env
+*.env
