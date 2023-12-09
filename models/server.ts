@@ -1,11 +1,13 @@
 import express, { Application } from 'express';
 import cors from 'cors';
+import chatGpt from '../controllers/chatGPT';
+import chatGPTRouter from '../routes/chatGPT.routes';
 
 class Server {
 
-    private app: Application;
+    private app;
     private port: string;
-    private apiPaths = { polygon: '/api/polygon' }
+    private apiPaths = { gpt: "/gpt" }
 
     constructor() {
         this.app = express()
@@ -20,7 +22,7 @@ class Server {
     }
 
     routes() {
-        
+        this.app.use(this.apiPaths.gpt, chatGPTRouter)
     }
 
     listen() {
