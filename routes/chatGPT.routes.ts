@@ -3,12 +3,13 @@ import chatGpt from "../controllers/chatGPT";
 
 const router = Router();
 
+router.get("/", (req, res) => {
+    res.json({ message: "Welcome to the chatGPT API!" });
+})
+
 router.post('/chat', async (req, res) => {
     try {
-        const { helper, text, id } = req.body;
-        console.log(id)
-        const model = "gpt-4-1106-preview";
-        // const model = "gpt-4"
+        const { helper, text, id, model } = req.body;
         const response = await chatGpt(helper, text, model, id);
         res.json({ response, id });
     } catch (error) {
